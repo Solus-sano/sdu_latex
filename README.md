@@ -1,6 +1,6 @@
 # SysuGraduateThesis
 
-中山大学计算机学院研究生毕业论文 LaTeX 模板, 基于[ThuThesis](https://github.com/tuna/thuthesis)项目开发
+基于中山大学硕士毕业论文latex模版修改得到的适用于山东大学本科毕业设计LaTeX模版, 基于[ThuThesis](https://github.com/tuna/thuthesis)项目开发
 
 关于开发模板的相关说明请参考 [https://github.com/tuna/thuthesis](https://github.com/tuna/thuthesis)
 
@@ -13,8 +13,8 @@
 - 个人电脑: 安装最新版 TexLive, 配合文本编辑器 VS Code, Sublime Text使用, 也可以直接使用其他LaTeX IDE.  
 - Overleaf: 注意选择编译器为 `xelatex`  
 
-## 编辑文件
-1. `sysusetup.tex`: 填写标题、作者、导师、学位名称等信息。
+## 编辑文件(已经根据山东大学本科毕业论文要求进行部分调整)
+1. `sysusetup.tex`: 填写标题、作者、导师、学位名称等信息(根据山东大学论文格式做部分修改，主要为调整封面信息与格式。该文件只负责填写封面信息，封面信息格式的设置在sysuthesis.cls文件中，如需调整的话要在.cls文件中查找修改)。
 2. `data/abstract.tex`: 填写中英文摘要。
 3. `data/denotation.tex`: 填写符号与缩略语,注意按音序排序。
 4. `data/chapxx.tex`: 各章内容,如有章节增删请在`main.tex`中修改相关记录`。
@@ -22,10 +22,7 @@
 6. `data/works.tex`: 学术成果。
 7. `data/acknowledgements.tex`: 致谢。
 8. `ref/refs.bib`: 引文数据库。
-9. `main.tex`: 主文件,用于控制文档选项(字体,学位类别):  
-    - 学术硕士: `\documentclass[degree=master]{sysuthesis}`;  
-    - 专业硕士: `\documentclass[degree=master,degree­-type=professional]{sysuthesis}`;  
-    - 博士: `\documentclass[degree=doctor]{sysuthesis}` 。
+9. `main.tex`: 主文件,用于控制文档选项(字体,学位类别)(根据山东大学论文格式做部分修改，主要为章节调整，移除不必要的信息)
 指定论文包括的部分,如摘要、目录、正文各章节、附录、引文数据库等等。
 (注意插入每章内容之后要加 `\cleardoublepage` 以保证在打印版中各章都从右边开始):  
 ```
@@ -70,8 +67,3 @@ make all (仅在Linux命令行可用)
 为确保字体符合学院要求, 最终版论文请在 Windows 平台编译, 或在Linux等平台安装Windows字体并指定字体集为 Windows: 
 `\documentclass[degree=doctor, fontset=windows]{sysuthesis}`
 
-## 更新记录
-- Tue 16 Mar 2021  
-    1. 支持较长的标题
-    2. 增加页眉与正文距离
-    3. 扉页日期置于底部
