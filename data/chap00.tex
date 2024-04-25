@@ -1,0 +1,75 @@
+% !TeX root = ../main.tex
+
+\chapter{模板使用要点}
+
+% \section{字数要求}
+% \begin{enumerate}
+%     \item 硕士论文: 正文一般为$1 \sim 3$万字；
+%     \item 博士论文: 正文一般不超过$15$万字。
+% \end{enumerate}
+\textbf{如本说明的表述与学校及学院规定有不同之处, 以学校或学院规定为准!} 
+
+\section{环境配置}
+\begin{enumerate}
+    \item 本地环境\\
+    下载安装最新版 TexLive 或 MikTeX, 请使用 TexLive 2020 及以上版本, 旧版或其他版本不保证兼容.
+    \item 在线环境\\
+    Overleaf。
+\end{enumerate}
+
+\section{字体}
+建议提交论文之前在Windows系统上编译以保证字体符合学院规定 (或在其他系统上安装Windows标准字体并指定使用windows字体: \verb|\documentclass[degree=master,fontset=windows]{sysuthesis}|).
+
+\section{格式要求}
+\begin{enumerate}
+    \item 打印版每章须从奇数页开始, 可在每章末尾增加\verb|\cleardoublepage|来确保符合这一要求. 如需调整可自行增删.
+    \item 缩略语列表: 请按照字母(A-Z)排序, 中文按音序排序.
+    \item 数学公式:
+        \begin{itemize}
+            \item 公式结束时, 一句话结束就用句号，若未结束就用逗号。切忌漏标点符号;
+            \item 数学公式中出现括号时，使用\verb|\left(|和\verb|\right)|（大括号、中括号、尖括号同理）;
+        \end{itemize}
+    \item 公式环境下如果需要中文字符, 可用\verb|\text{}|, 如: 
+        \begin{multicols}{2}
+            \item []\verb|$a + b = \text{中文}$| 
+            \item [] $a + b = \text{中文}$
+        \end{multicols}
+
+    \item 链接需用\verb|\url| 或 \verb|\href| 命令括起来.
+\end{enumerate}
+
+
+
+\section{编辑文件}
+\begin{enumerate}
+    \item \texttt{sysusetup.tex}: 填写标题、作者、导师、学位名称等信息。如有两位导师, 可将 \verb|sysusetup.tex| 文件 \verb|jointsupervisor| 与 \verb|jointsupervisor-title| 前的注释符号去掉并填入相应姓名及职称.
+    \item 版权页如需使用扫描件, 可将\verb|data/statement_page_official.pdf|文件替换为扫描件或照片.
+    \item \texttt{data/abstract.tex}: 填写中英文摘要。
+    \item \texttt{data/denotation.tex}: 填写符号与缩略语，注意按音序排序。
+    \item \texttt{data/chapxx.tex}: 各章内容，如有章节增删请在\texttt{main.tex}中修改相关记录。
+    \item \texttt{data/appendix.tex}: 附录。
+    \item \texttt{data/works.tex}: 学术成果。
+    \item \texttt{data/acknowledgements.tex}: 致谢。
+    \item \texttt{ref/refs.bib}: 引文数据库。
+    \item \texttt{main.tex}: 主文件，用于控制文档选项（字体，学位类别）:
+
+    \begin{enumerate}
+        \item 学术硕士: \verb|\documentclass[degree=master]{sysuthesis}|;
+        \item 专业硕士: \verb|\documentclass[degree=master,degree-type=professional]{sysuthesis}|;
+        \item 博士: \verb|\documentclass[degree=doctor]{sysuthesis}|。
+    \end{enumerate}
+    指定论文要包括的部分，如摘要、目录、正文各章节、附录、引文数据库等等。
+\end{enumerate}
+
+除上述文件外，
+如无必要请勿修改其他重要文件，
+如 \verb|sysuthesis-numeric.bst|（用于控制引文格式），
+\verb|sysuthesis.cls| （文档类，用于控制文档显示的样式）等。
+
+\section{其他}
+\begin{enumerate}
+    \item 更多用法示例可参考以下各章 (但关于格式的规定以学校或学院的具体说明为准).
+    \item 本模板基于清华大学学位论文模板\footnote{\url{https://github.com/tuna/thuthesis}}改写, 部分问题亦可尝试在thuthesis的issues页面搜索解决方案.
+\end{enumerate}
+
+\cleardoublepage
