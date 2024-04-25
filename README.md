@@ -1,6 +1,8 @@
 # SysuGraduateThesis
 
-基于中山大学硕士毕业论文latex模版修改得到的适用于山东大学本科毕业设计LaTeX模版, 基于[ThuThesis](https://github.com/tuna/thuthesis)项目开发
+基于中山大学硕士毕业论文latex模版修改得到的适用于山东大学本科毕业设计LaTeX模版, 
+
+原中山大学硕士毕业论文latex模版基于[ThuThesis](https://github.com/tuna/thuthesis)项目开发
 
 关于开发模板的相关说明请参考 [https://github.com/tuna/thuthesis](https://github.com/tuna/thuthesis)
 
