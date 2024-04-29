@@ -1,4 +1,4 @@
-# SysuGraduateThesis
+# SduGraduateThesis
 
 基于中山大学硕士毕业论文latex模版修改得到的适用于山东大学本科毕业设计LaTeX模版, 
 
